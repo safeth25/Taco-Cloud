@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import lombok.extern.slf4j.Slf4j;
 import sia.taco_cloud.Ingredient;
 import sia.taco_cloud.Ingredient.Type;
+
 @Slf4j
 @Controller
 @RequestMapping("/design")
@@ -46,11 +47,11 @@ public class DesignTacoController {
     }
 
     @PostMapping
-    public String processDesign(Design design){
+    public String processDesign(Taco taco){
         // Save the taco design...
         // We'll do this in chapter 3
-        log.info("Processing design: " + design);
+        log.info("Processing design: " + taco);
 
-        return "redirect:/orders/current"
+        return "redirect:/orders/current";
     }
 }

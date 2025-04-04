@@ -7,7 +7,7 @@
     <body>
         <form method="POST" th:action="@{/orders}" th:object="${order}">
             <h1>Order your taco creations!</h1>
-            <img th:src="@{/images/TacoCloud.png}" />
+            <img th:src="@{/images/TacoCloud.jpg}" />
             <a th:href="@{/design}" id="another">Design another taco</a><br/>
 
             <div th:if="${#fields.hasErrors()}">
@@ -25,15 +25,15 @@
             <input type="text" th:field="*{street}" />
             <br/>
 
-            <label for="city">Street address: </label>
+            <label for="city">City: </label>
             <input type="text" th:field="*{city}" />
             <br/>
 
-            <label for="state">Street address: </label>
+            <label for="state">State: </label>
             <input type="text" th:field="*{state}" />
             <br/>
 
-            <label for="zip">Street address: </label>
+            <label for="zip">Zip Code: </label>
             <input type="text" th:field="*{zip}" />
             <br/>
 
